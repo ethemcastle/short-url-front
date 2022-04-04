@@ -1,0 +1,65 @@
+{
+  "name": "url-shortener-ui",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.33",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
+    "axios": "^0.24.0",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "start": "ENV=dev react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --coverage --watchAll=false",
+    "test:watch": "react-scripts test --coverage --watchAll",
+    "lint": "eslint src/ --fix",
+    "prepare": "npx husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@testing-library/dom": "^8.10.1",
+    "@types/react-router-dom": "^5.3.2",
+    "eslint": "^7.32.0",
+    "gh-pages": "^3.2.3",
+    "history": "^5.0.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.3",
+    "ts-jest": "^27.0.7"
+  },
+  "lint-staged": {
+    "*.ts|*.tsx": "eslint src/ --cache --fix"
+  }
+}
